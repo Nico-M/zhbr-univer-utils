@@ -20,7 +20,12 @@
     "build": "tsup",
     "dev": "tsup --watch",
     "prepare": "npm run build",
-    "test": "jest"
+    "test": "jest",
+    "version": "npm run build && git add -A dist",
+    "postversion": "git push && git push --tags",
+    "release:patch": "npm version patch",
+    "release:minor": "npm version minor",
+    "release:major": "npm version major"
   },
   "keywords": [],
   "author": "",

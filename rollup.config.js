@@ -24,10 +24,12 @@ module.exports = [
         name: 'ZhbrUniverUtils',
         sourcemap: true,
         globals: {
-          // 如果有全局变量依赖，在这里定义
+          '@univerjs/core': 'UniverCore',
+          '@univerjs/sheets-data-validation': 'UniverSheetsDataValidation'
         }
       },
     ],
+    external: ['@univerjs/core', '@univerjs/sheets-data-validation'],
     plugins: [
       replace({
         preventAssignment: true,

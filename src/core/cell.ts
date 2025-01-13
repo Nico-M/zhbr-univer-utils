@@ -110,7 +110,7 @@ export function covertCell(
   }
 
   if (cell.f !== undefined) {
-    newCell.f = cell.f;
+    newCell.f = cell.f.replace(/_xlfn\./g, '');
   }
 
   const cellStyle: IStyleData = {};
